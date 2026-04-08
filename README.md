@@ -7,6 +7,8 @@ Este repositorio contem somente os artefatos publicos para validacao de autentic
 - `assinaturas/manifesto-sha256.txt`
 - `assinaturas/manifesto-sha256.txt.asc`
 - `assinaturas/chave-publica.asc`
+- `assinaturas/pedro/*`
+- `assinaturas/danilo/*`
 - `verify-docs.sh` para verificacao local por terceiros
 
 ## Verificacao

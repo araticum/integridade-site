@@ -1,7 +1,7 @@
 # Manifesto SHA-256 - Programa de Integridade
 # Gerado em: 2026-04-08T19:38:25Z
-# Assinante: Pedro Araticum <pedro@araticum.net>
-# Key ID: 63AE3A9E00E8A539
+# Assinante: Danilo Araticum <danilo@araticum.net>
+# Key ID: 9873933D7CA3B5E5
 
 c1667c2a82be328e85df0661166fd1bae60f53eb74a8371099425ae0b026b1a9  README.md
 fce3d929617eb4b815a7b3daf68d2332c5a5d090d2c5b775ecea140965d7efb0  declaracao_compromisso_etico.md
