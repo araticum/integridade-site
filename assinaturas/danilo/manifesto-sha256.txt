@@ -1,9 +1,9 @@
 # Manifesto SHA-256 - Programa de Integridade
-# Gerado em: 2026-04-08T19:53:23Z
+# Gerado em: 2026-04-08T19:57:29Z
 # Assinante: danilo
 # Key ID: 9873933D7CA3B5E5
 
-338d4320fe81878849472b57ba0875628ca2cda56af730149701ad5941a549c3  README.md
+36930c115e0fbbe64a8890aa56d88b4ddc10e6049c9a95b544c3285642de284b  README.md
 fce3d929617eb4b815a7b3daf68d2332c5a5d090d2c5b775ecea140965d7efb0  declaracao_compromisso_etico.md
 6647a489b71e644f7335125e240492f9c6162b7c0020100925b1e3af234e3da4  politica_relacionamento_setor_publico.md
 84867005057964fef46b237e37309f80b02b44972384e9d6839d6096f1f9823e  politica_canal_etico.md
