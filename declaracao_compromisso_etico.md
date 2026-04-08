@@ -53,7 +53,7 @@ e) Retaliar qualquer pessoa que reporte, de boa-fé, uma irregularidade pelo
 
 O responsável pelo Programa de Integridade desta empresa é o sócio:
 
-**Nome:** Pedro Henrique Miranda Lopes
+**Nome:** Pedro Miranda
 **Cargo/Função:** Sócio/Administrador
 **E-mail:** pedro@araticum.net
 
@@ -83,15 +83,14 @@ ou sempre que houver mudança relevante nas atividades da empresa.
 __________________________________
 
 
-**[Danilo Aguiar Macedo de Almeida]**  
+**[Danilo Almeida]**  
 CPF: [031.946.381-81]   
 Sócio-[Administrador]
 
 
 
-**[Pedro Henrique Miranda Lopes]**  
+**[Pedro Miranda]**  
 CPF: [014.301.841-83]      
 Sócio-[Administrador]     
-
 
 
