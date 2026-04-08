@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Validacao de Assinatura - Araticum</title>
+    <style>
+      :root {
+        --bg-primary: #111d17;
+        --bg-secondary: #162419;
+        --bg-card: #1a2b20;
+        --border-color: #2a3d30;
+        --text-primary: #d8ede2;
+        --text-secondary: #9abba8;
+        --accent: #10b981;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, #0d1811 0%, var(--bg-primary) 55%);
+        color: var(--text-primary);
+        font-family: "Segoe UI", Tahoma, sans-serif;
+      }
+      .wrap { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+      .company { text-align: center; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; }
+      .card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; padding: 20px; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      ul { line-height: 1.8; }
+      code { background: var(--bg-secondary); padding: 2px 6px; border-radius: 6px; }
+      p { color: var(--text-secondary); }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <p class="company">Araticum</p>
+      <h1>Validacao Publica de Assinaturas</h1>
+      <p>Esta pagina publica apenas os artefatos de verificacao de autenticidade dos documentos.</p>
+      <section class="card">
+        <ul>
+          <li><a href="./assinaturas/manifesto-sha256.txt">manifesto-sha256.txt</a></li>
+          <li><a href="./assinaturas/manifesto-sha256.txt.asc">manifesto-sha256.txt.asc</a></li>
+          <li><a href="./assinaturas/chave-publica.asc">chave-publica.asc</a></li>
+          <li><a href="./verify-docs.sh">verify-docs.sh</a></li>
+        </ul>
+        <p>Uso rapido:</p>
+        <p><code>./verify-docs.sh</code></p>
+      </section>
+    </main>
+  </body>
+</html>
