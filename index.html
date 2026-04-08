@@ -103,6 +103,12 @@
         color: var(--text-muted);
         font-size: 0.9rem;
       }
+      .page-verify {
+        margin-top: 18px;
+        text-align: center;
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+      }
     </style>
   </head>
   <body>
@@ -288,7 +294,6 @@
           <p><strong>SHA-256:</strong> ${pedro ? `<code>${pedro}</code>` : "nao registrado para este arquivo"}</p>
           <p><strong>Assinante:</strong> Danilo Almeida - Socio/Administrador</p>
           <p><strong>SHA-256:</strong> ${danilo ? `<code>${danilo}</code>` : "nao registrado para este arquivo"}</p>
-          <p><strong>Valide a assinatura:</strong> <a href="./verify-docs.sh">link</a></p>
           <p class="sig-line">Validacao textual inline; artefatos de assinatura permanecem no repositorio para auditoria.</p>
         `;
       }
@@ -328,5 +333,6 @@
 
       loadAll();
     </script>
+    <p class="page-verify"><a href="./verify-docs.sh">Valide a assinatura: link</a></p>
   </body>
 </html>
