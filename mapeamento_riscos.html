@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mapeamento de Riscos - Programa de Integridade</title>
+    <style>
+      :root { --bg:#111d17; --card:#1a2b20; --line:#2a3d30; --text:#d8ede2; --muted:#9abba8; --accent:#10b981; }
+      * { box-sizing: border-box; }
+      body { margin:0; background:linear-gradient(180deg,#0d1811 0%,#111d17 55%); color:var(--text); font-family:"Segoe UI",Tahoma,sans-serif; }
+      .wrap { max-width:1200px; margin:0 auto; padding:28px 18px 40px; }
+      .table-wrap { margin-top:16px; background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:auto; }
+      table { width:100%; border-collapse:collapse; min-width:980px; }
+      th, td { padding:10px 12px; border-bottom:1px solid var(--line); text-align:left; font-size:.92rem; vertical-align:top; }
+      th { position:sticky; top:0; background:#162419; }
+      a { color:var(--accent); }
+      p { color:var(--muted); }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Mapeamento de Riscos</h1>
+      <p>Visualizacao inline do CSV. <a href="./index.html">Voltar ao inicio</a></p>
+      <div class="table-wrap"><table><thead id="thead"></thead><tbody id="tbody"></tbody></table></div>
+    </main>
+    <script>
+      const esc = (v) => v.replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;");
+      const parseLine = (line) => {
+        const out=[]; let cell=""; let quoted=false;
+        for (let i=0;i<line.length;i+=1) {
+          const ch=line[i];
+          if (ch === '"') { if (quoted && line[i+1] === '"') { cell+='"'; i+=1; } else { quoted=!quoted; } }
+          else if (ch === "," && !quoted) { out.push(cell); cell=""; }
+          else { cell += ch; }
+        }
+        out.push(cell); return out;
+      };
+      (async () => {
+        const raw = await (await fetch("./mapeamento_riscos.csv",{cache:"no-store"})).text();
+        const lines = raw.split(/\r?\n/).filter(Boolean);
+        const headers = parseLine(lines[0]);
+        const rows = lines.slice(1).map(parseLine);
+        document.getElementById("thead").innerHTML = "<tr>" + headers.map((h)=>`<th>${esc(h)}</th>`).join("") + "</tr>";
+        document.getElementById("tbody").innerHTML = rows.map((r)=>"<tr>"+r.map((c)=>`<td>${esc(c)}</td>`).join("")+"</tr>").join("");
+      })();
+    </script>
+  </body>
+</html>
