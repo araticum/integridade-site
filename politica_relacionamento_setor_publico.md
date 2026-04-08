@@ -1,35 +1,35 @@
-# Politica de Relacionamento com o Setor Publico
+# Política de Relacionamento com o Setor Público
 
 ## 1. Objetivo
 
-Definir regras para interacoes com agentes publicos, assegurando conformidade legal e etica.
+Definir regras para interações com agentes públicos, assegurando conformidade legal e ética.
 
-## 2. Abrangencia
+## 2. Abrangência
 
-Aplica-se a socios, administradores, colaboradores, terceiros e parceiros que atuem em nome da organizacao.
+Aplica-se a sócios, administradores, colaboradores, terceiros e parceiros que atuem em nome da organização.
 
 ## 3. Diretrizes Gerais
 
-- Toda interacao com agente publico deve ter finalidade legitima e registro adequado.
-- E vedado oferecer, prometer, autorizar ou conceder vantagem indevida.
-- E vedado solicitar ou aceitar favorecimento indevido em processos publicos.
+- Toda interação com agente público deve ter finalidade legítima e registro adequado.
+- É vedado oferecer, prometer, autorizar ou conceder vantagem indevida.
+- É vedado solicitar ou aceitar favorecimento indevido em processos públicos.
 
-## 4. Brindes, Hospitalidades e Patrocinios
+## 4. Brindes, Hospitalidades e Patrocínios
 
-- Somente permitidos quando legais, institucionais, de baixo valor e sem expectativa de contraprestacao indevida.
-- Devem seguir aprovacao previa conforme alçada interna.
-- Devem ser documentados com transparencia.
+- Somente permitidos quando legais, institucionais, de baixo valor e sem expectativa de contraprestação indevida.
+- Devem seguir aprovação prévia conforme alçada interna.
+- Devem ser documentados com transparência.
 
-## 5. Contratacoes e Licitacoes
+## 5. Contratações e Licitações
 
 - Processos devem observar legalidade, impessoalidade e rastreabilidade.
-- E proibido uso de informacao privilegiada ou artificios anticompetitivos.
+- É proibido uso de informação privilegiada ou artifícios anticompetitivos.
 
 ## 6. Registros e Controles
 
-- Manter registros completos e fieis de despesas, reunioes e comunicacoes relevantes.
-- Submeter eventuais excecoes para validacao de Compliance/Juridico.
+- Manter registros completos e fiéis de despesas, reuniões e comunicações relevantes.
+- Submeter eventuais exceções para validação de Compliance/Jurídico.
 
-## 7. Violacoes
+## 7. Violações
 
-Descumprimentos podem gerar medidas disciplinares, rescisao contratual e comunicacao as autoridades competentes.
+Descumprimentos podem gerar medidas disciplinares, rescisão contratual e comunicação às autoridades competentes.

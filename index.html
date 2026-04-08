@@ -98,16 +98,17 @@
         padding: 1px 6px;
         word-break: break-all;
       }
-      .sig-line {
-        margin-top: 10px;
-        color: var(--text-muted);
-        font-size: 0.9rem;
-      }
       .page-verify {
         margin-top: 18px;
         text-align: center;
         color: var(--text-secondary);
         font-size: 0.95rem;
+      }
+      .verify-status {
+        margin-top: 8px;
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 0.9rem;
       }
     </style>
   </head>
@@ -115,10 +116,10 @@
     <main class="wrap">
       <p class="company">Araticum</p>
       <h1>Programa de Integridade</h1>
-      <p class="lead">Documentos oficiais com visualizacao inline e validacao textual de manifesto.</p>
+      <p class="lead">Consulta pública dos documentos oficiais e da validação de assinatura.</p>
 
       <section class="panel open" data-file="declaracao_compromisso_etico.md">
-        <button class="panel-head" type="button">Declaracao de Compromisso Etico <span class="chev">−</span></button>
+        <button class="panel-head" type="button">Declaração de Compromisso Ético <span class="chev">−</span></button>
         <div class="panel-body">
           <div class="doc" data-render="markdown"></div>
           <div class="manifest" data-manifest></div>
@@ -126,7 +127,7 @@
       </section>
 
       <section class="panel" data-file="politica_relacionamento_setor_publico.md">
-        <button class="panel-head" type="button">Politica de Relacionamento com o Setor Publico <span class="chev">+</span></button>
+        <button class="panel-head" type="button">Política de Relacionamento com o Setor Público <span class="chev">+</span></button>
         <div class="panel-body">
           <div class="doc" data-render="markdown"></div>
           <div class="manifest" data-manifest></div>
@@ -134,7 +135,7 @@
       </section>
 
       <section class="panel" data-file="politica_canal_etico.md">
-        <button class="panel-head" type="button">Politica do Canal Etico <span class="chev">+</span></button>
+        <button class="panel-head" type="button">Política do Canal Ético <span class="chev">+</span></button>
         <div class="panel-body">
           <div class="doc" data-render="markdown"></div>
           <div class="manifest" data-manifest></div>
@@ -142,7 +143,7 @@
       </section>
 
       <section class="panel" data-file="mapeamento_riscos.csv">
-        <button class="panel-head" type="button">Mapeamento de Riscos (visualizacao inline) <span class="chev">+</span></button>
+        <button class="panel-head" type="button">Mapeamento de Riscos (visualização inline) <span class="chev">+</span></button>
         <div class="panel-body">
           <div class="doc" data-render="csv"></div>
           <div class="manifest" data-manifest></div>
@@ -261,7 +262,7 @@
 
       function csvToHtml(csv) {
         const lines = csv.split(/\r?\n/).filter(Boolean);
-        if (!lines.length) return "<p>Sem conteudo.</p>";
+        if (!lines.length) return "<p>Sem conteúdo.</p>";
         const headers = parseCsvLine(lines[0]);
         const rows = lines.slice(1).map(parseCsvLine);
         return `
@@ -275,26 +276,30 @@
           </div>`;
       }
 
-      function parseManifest(text) {
+      function parseManifestData(text) {
         const map = {};
+        let generatedAt = "";
         const lines = text.split(/\r?\n/);
         for (const ln of lines) {
+          const g = ln.match(/^#\s+Gerado em:\s+(.+)$/i);
+          if (g) generatedAt = g[1].trim();
           const m = ln.match(/^([a-f0-9]{64})\s+(.+)$/i);
           if (m) map[m[2].trim()] = m[1].toLowerCase();
         }
-        return map;
+        return { hashes: map, generatedAt };
       }
 
-      function renderManifest(file, pedroMap, daniloMap) {
-        const pedro = pedroMap[file];
-        const danilo = daniloMap[file];
+      function renderManifest(file, pedroData, daniloData) {
+        const pedro = pedroData.hashes[file];
+        const danilo = daniloData.hashes[file];
         return `
-          <h4>Manifesto de Integridade (texto)</h4>
-          <p><strong>Assinante:</strong> Pedro Miranda - Socio/Administrador</p>
-          <p><strong>SHA-256:</strong> ${pedro ? `<code>${pedro}</code>` : "nao registrado para este arquivo"}</p>
-          <p><strong>Assinante:</strong> Danilo Almeida - Socio/Administrador</p>
-          <p><strong>SHA-256:</strong> ${danilo ? `<code>${danilo}</code>` : "nao registrado para este arquivo"}</p>
-          <p class="sig-line">Validacao textual inline; artefatos de assinatura permanecem no repositorio para auditoria.</p>
+          <h4>Manifesto de Integridade</h4>
+          <p><strong>Assinante:</strong> Pedro Miranda - Sócio/Administrador</p>
+          <p><strong>SHA-256:</strong> ${pedro ? `<code>${pedro}</code>` : "não registrado para este arquivo"}</p>
+          <p><strong>Data/hora do hash:</strong> ${pedroData.generatedAt || "não informada"}</p>
+          <p><strong>Assinante:</strong> Danilo Almeida - Sócio/Administrador</p>
+          <p><strong>SHA-256:</strong> ${danilo ? `<code>${danilo}</code>` : "não registrado para este arquivo"}</p>
+          <p><strong>Data/hora do hash:</strong> ${daniloData.generatedAt || "não informada"}</p>
         `;
       }
 
@@ -315,8 +320,8 @@
           fetch("./assinaturas/pedro/manifesto-sha256.txt", { cache: "no-store" }).then((r) => r.text()),
           fetch("./assinaturas/danilo/manifesto-sha256.txt", { cache: "no-store" }).then((r) => r.text())
         ]);
-        const pedroMap = parseManifest(pedroManifest);
-        const daniloMap = parseManifest(daniloManifest);
+        const pedroData = parseManifestData(pedroManifest);
+        const daniloData = parseManifestData(daniloManifest);
 
         for (const panel of panelEls) {
           const file = panel.getAttribute("data-file");
@@ -327,12 +332,26 @@
           const raw = await fetch(`./${file}`, { cache: "no-store" }).then((r) => r.text());
           if (render === "csv") target.innerHTML = csvToHtml(raw);
           else target.innerHTML = markdownToHtml(raw);
-          manifestTarget.innerHTML = renderManifest(file, pedroMap, daniloMap);
+          manifestTarget.innerHTML = renderManifest(file, pedroData, daniloData);
+        }
+
+        try {
+          const v = await fetch("./assinaturas/validacao.json", { cache: "no-store" }).then((r) => r.json());
+          const el = document.getElementById("verify-status");
+          if (el) {
+            el.textContent = v.ok
+              ? `Status da validação automática: válido (${v.validated_at_utc})`
+              : "Status da validação automática: inválido";
+          }
+        } catch (_e) {
+          const el = document.getElementById("verify-status");
+          if (el) el.textContent = "Status da validação automática: indisponível";
         }
       }
 
       loadAll();
     </script>
-    <p class="page-verify"><a href="./verify-docs.sh">Valide a assinatura: link</a></p>
+    <p class="page-verify"><a href="./verify-docs.sh">Validar assinatura</a></p>
+    <p class="verify-status" id="verify-status"></p>
   </body>
 </html>

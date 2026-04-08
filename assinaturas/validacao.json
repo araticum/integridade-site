@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "validated_at_utc": "2026-04-08T20:36:17Z",
+  "validated_by": "manual-sync",
+  "checks": {
+    "pedro_signature": "ok",
+    "danilo_signature": "ok",
+    "pedro_hashes": "ok",
+    "danilo_hashes": "ok"
+  }
+}

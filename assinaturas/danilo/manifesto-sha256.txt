@@ -1,10 +1,10 @@
 # Manifesto SHA-256 - Programa de Integridade
-# Gerado em: 2026-04-08T19:57:29Z
+# Gerado em: 2026-04-08T20:36:17Z
 # Assinante: danilo
 # Key ID: 9873933D7CA3B5E5
 
 36930c115e0fbbe64a8890aa56d88b4ddc10e6049c9a95b544c3285642de284b  README.md
-fce3d929617eb4b815a7b3daf68d2332c5a5d090d2c5b775ecea140965d7efb0  declaracao_compromisso_etico.md
-6647a489b71e644f7335125e240492f9c6162b7c0020100925b1e3af234e3da4  politica_relacionamento_setor_publico.md
-84867005057964fef46b237e37309f80b02b44972384e9d6839d6096f1f9823e  politica_canal_etico.md
-e79e839b745cd6eb7367d645ebc0b3299b41becab5d0d66f4672b3d64ee7caf7  CHANGELOG.md
+42c07b1d3fbdfbfa628e3f46b934415808e882b622a3c608e522cd3ecb9633fd  declaracao_compromisso_etico.md
+81f65aed9628f73f7e9c6a5e88237dcc6a3ea232e785f1ed35012c5455ff23ee  politica_relacionamento_setor_publico.md
+0c8728cb2e1b536f6b8ed131699b9afc264f532d22a01a8004d09540c13a7a46  politica_canal_etico.md
+f89ac31cf94684a78c7185641b6a3c8cc67f00115360a37b6a5058982b0cfed6  CHANGELOG.md

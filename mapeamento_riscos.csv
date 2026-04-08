@@ -1,6 +1,6 @@
 id_risco,categoria,descricao,probabilidade,impacto,nivel_risco,controle_existente,plano_acao,responsavel,prazo,status
-R-001,Anticorrupcao,Pagamento indevido a agente publico,Media,Alto,Alto,Politica anticorrupcao e treinamento,Reforcar due diligence de terceiros,Compliance,2026-06-30,Em andamento
-R-002,Conflito de interesses,Decisao influenciada por interesse pessoal,Baixa,Alto,Medio,Declaracao anual de conflitos,Implantar revisao trimestral de declaracoes,RH e Compliance,2026-07-31,Planejado
-R-003,Fraude interna,Manipulacao de documentos ou registros,Media,Medio,Medio,Segregacao de funcoes e aprovacoes duplas,Automatizar trilha de auditoria,Controladoria,2026-08-15,Em andamento
-R-004,Canal etico,Subnotificacao por medo de retaliacao,Media,Medio,Medio,Politica de nao retaliacao,Campanha de conscientizacao semestral,Compliance e Comunicacao,2026-05-31,Planejado
-R-005,Terceiros,Fornecedor com historico de sancoes,Baixa,Alto,Medio,Checklist de homologacao,Incluir monitoramento continuo de sancoes,Suprimentos,2026-09-30,Planejado
+R-001,Anticorrupção,Pagamento indevido a agente público,Média,Alto,Alto,Política anticorrupção e treinamento,Reforçar due diligence de terceiros,Compliance,2026-06-30,Em andamento
+R-002,Conflito de interesses,Decisão influenciada por interesse pessoal,Baixa,Alto,Médio,Declaração anual de conflitos,Implantar revisão trimestral de declarações,RH e Compliance,2026-07-31,Planejado
+R-003,Fraude interna,Manipulação de documentos ou registros,Média,Médio,Médio,Segregação de funções e aprovações duplas,Automatizar trilha de auditoria,Controladoria,2026-08-15,Em andamento
+R-004,Canal ético,Subnotificação por medo de retaliação,Média,Médio,Médio,Política de não retaliação,Campanha de conscientização semestral,Compliance e Comunicação,2026-05-31,Planejado
+R-005,Terceiros,Fornecedor com histórico de sanções,Baixa,Alto,Médio,Checklist de homologação,Incluir monitoramento contínuo de sanções,Suprimentos,2026-09-30,Planejado
